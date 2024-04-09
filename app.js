@@ -43,8 +43,10 @@ createApp({
         },
         computerScienceQuestion() {
             axios.get('https://opentdb.com/api.php?amount=10&category=18&difficulty=easy&type=multiple').then((response) => {
-                this.computerQuestions = response.data.results[4];
-                console.log(this.computerQuestions)
+                this.computerQuestions = response.data.results;
+                console.log(this.computerQuestions) 
+                /* const questionScience = response.data.results;
+                console.log(this.questionScience); */
             })
         }
     },

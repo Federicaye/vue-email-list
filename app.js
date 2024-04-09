@@ -22,7 +22,7 @@ createApp({
             }
         },
         solarIrradiance() {
-            axios.get('https://api.openweathermap.org/energy/1.0/solar/data?lat=60.45&lon=-38.67&date=2023-03-30&tz=+03:00&appid=ed11ecb7a55d3195acbe15f15e43a692').then((response) => {
+            axios.get('https://api.openweathermap.org/energy/1.0/solar/data?lat=60.45&lon=-38.67&date=2024-04-9&tz=+03:00&APPID=').then((response) => {
                 console.log(response.data);
             })
         },
@@ -55,5 +55,6 @@ createApp({
         this.catImg();
         this.filmQuestion();
        this.computerScienceQuestion(); 
+       this.solarIrradiance();
     }
 }).mount('#app')

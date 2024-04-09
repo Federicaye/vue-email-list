@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://unpkg.com/axios@1.6.7/dist/axios.min.js'></script>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
+    <script src="app.js" defer></script>
+    <title>Vue email list</title>
+</head>
+<body>
+    <div id="app">  
+        <button @click="getRandomEmail">email</button>  
+        <ul>
+            <li v-for="(email, index) in tenEmail">{{email}}</li>
+        </ul>
+
+        <button @click="filmQuestion">film question</button>
+        <p>{{filmQuestionText}}</p>
+        <ul>
+            <li v-for="(answer, index) in answers">{{answer}}</li>
+            <li>{{correctAnswer}}</li>
+        </ul>
+
+        <button @click="catImg">cat</button>
+        <div><img :src="catImgUrl" alt=""></div>
+        
+    </div>
+    
+</body>
+</html>
